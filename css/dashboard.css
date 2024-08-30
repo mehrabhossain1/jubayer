@@ -1,0 +1,172 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  height: 100vh;
+}
+
+.dashboard-container {
+  display: flex;
+  width: 100%;
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 250px;
+  background-color: #2c3e50;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: fixed;
+  justify-content: space-between;
+  transition: width 0.3s ease;
+}
+
+.sidebar-header {
+  padding: 20px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  border-bottom: 1px solid #34495e;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.sidebar-menu li {
+  border-bottom: 1px solid #34495e;
+}
+
+.sidebar-menu li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 15px 20px;
+  transition: background-color 0.3s;
+}
+
+.sidebar-menu li a:hover {
+  background-color: #34495e;
+}
+
+/* Home link styling */
+.home-link {
+  display: block;
+  text-align: center;
+  color: #4caf50;
+  text-decoration: none;
+  padding: 15px 0;
+  font-size: 16px;
+  border-top: 1px solid #34495e;
+}
+
+.home-link:hover {
+  background-color: #34495e;
+}
+
+/* Main content styling */
+.main-content {
+  margin-left: 250px; /* Width of sidebar */
+  padding: 20px;
+  flex: 1;
+  overflow-y: auto;
+  background-color: #ecf0f1;
+  transition: margin-left 0.3s ease;
+}
+
+.main-header {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.upload-form input,
+.upload-form button {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.upload-form button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.upload-form button:hover {
+  background-color: #45a049;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px; /* Adjust sidebar width for tablets */
+  }
+
+  .main-content {
+    margin-left: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  .sidebar {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 1px solid #34495e;
+  }
+
+  .sidebar-menu {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .sidebar-menu li {
+    flex: 1;
+    border: none;
+    border-right: 1px solid #34495e;
+  }
+
+  .sidebar-menu li:last-child {
+    border-right: none;
+  }
+
+  .sidebar-menu li a {
+    padding: 10px 0;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .home-link {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding-top: 70px; /* To adjust for the sidebar positioning */
+  }
+
+  .sidebar-header {
+    display: none; /* Hide header on mobile for more space */
+  }
+}

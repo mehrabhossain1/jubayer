@@ -1,0 +1,297 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar Section */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Add gap between logo image and text */
+}
+
+.navbar img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.navbar .logo p {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin: 0; /* Remove extra margins */
+}
+
+.navbar .menu {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar .menu li {
+  display: inline-block;
+}
+
+.navbar .menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.navbar .menu a:hover {
+  background-color: #ddd;
+}
+
+.navbar .login-btn {
+  padding: 8px 16px;
+  background-color: #4f46e5;
+  color: #fff !important;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.navbar .login-btn:hover {
+  background-color: #3730a3 !important;
+}
+
+/* Responsive Design for Mobile Devices */
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: space-between;
+  }
+
+  .navbar .logo {
+    flex: 1;
+    visibility: visible; /* Keep logo visible initially */
+  }
+
+  .navbar .menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(122, 122, 122, 0.8);
+    gap: 20px;
+    z-index: 10;
+  }
+
+  .navbar .menu.active {
+    display: flex; /* Show menu when active */
+  }
+
+  .navbar .menu a {
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .navbar .hamburger {
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    border-radius: 4px;
+    margin-left: auto;
+    z-index: 20; /* Ensure hamburger is above the menu */
+  }
+
+  .navbar .hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+  }
+
+  .navbar .hamburger.active ~ .logo {
+    visibility: hidden; /* Hide logo when hamburger is active */
+  }
+}
+
+@media (min-width: 769px) {
+  .navbar .hamburger {
+    display: none; /* Hide hamburger on larger screens */
+  }
+}
+
+/* Banner Styles */
+.banner {
+  position: relative;
+  width: 100%;
+  height: 70vh; /* Height of the banner */
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 1s ease-in-out;
+  opacity: 0;
+}
+
+.slide1 {
+  background-image: url("../assets/banner11.jpg"); /* Path to your first image */
+}
+
+.slide2 {
+  background-image: url("../assets/banner2.jpg"); /* Path to your second image */
+}
+
+.active {
+  opacity: 1;
+}
+/* Banner Styles */
+
+/* About Us Section */
+.about-us {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  background-color: #f9f9f9; /* Optional: Light background color for better contrast */
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+  flex-direction: column; /* Stack vertically by default */
+}
+
+.about-text {
+  flex: 1;
+  text-align: left;
+  padding: 20px;
+}
+
+.about-text h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design for Desktop */
+@media (min-width: 768px) {
+  .about-content {
+    flex-direction: row; /* Display side by side on larger screens */
+  }
+}
+
+/* Footer Styling */
+.footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  background-color: #4b4b4b;
+  color: #dfdfdf;
+
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-logo {
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.footer-nav,
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-title {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.social-links {
+  display: flex;
+  gap: 10px;
+}
+
+.contact-link {
+  color: #fafafa;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (min-width: 640px) {
+  .footer {
+    grid-template-columns: repeat(3, 1fr);
+    text-align: left;
+  }
+
+  .footer-nav {
+    align-items: flex-start;
+  }
+
+  .footer-contact {
+    align-items: flex-end;
+  }
+}

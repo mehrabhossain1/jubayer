@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Page</title>
+    <link rel="stylesheet" href="css/dashboard.css" />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <h2>Dashboard</h2>
+        </div>
+        <ul class="sidebar-menu">
+          <li><a href="#upload">Upload Notices</a></li>
+          <li><a href="#view">View Notices</a></li>
+        </ul>
+        <a href="/homepage.html" class="home-link">Go to Home</a>
+        <!-- Added Home link -->
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <header class="main-header">
+          <h1>Welcome to the Dashboard</h1>
+        </header>
+
+        <section id="upload" class="section">
+          <h2>Upload Notices</h2>
+          <!-- Upload Form -->
+          <form class="upload-form">
+            <label for="notice-title">Notice Title:</label>
+            <input
+              type="text"
+              id="notice-title"
+              name="notice-title"
+              placeholder="Enter notice title"
+              required
+            />
+
+            <label for="notice-file">Upload File:</label>
+            <input
+              type="file"
+              id="notice-file"
+              name="notice-file"
+              accept=".pdf"
+              required
+            />
+
+            <button type="submit" class="btn">Upload Notice</button>
+          </form>
+        </section>
+
+        <section id="view" class="section">
+          <h2>View Notices</h2>
+          <!-- Placeholder for notice table or list -->
+          <p>List of uploaded notices will appear here.</p>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

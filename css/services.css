@@ -1,0 +1,128 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the body takes up at least the full viewport height */
+}
+
+main {
+  flex: 1; /* Allows the main content to expand and fill the available space */
+}
+
+header {
+  text-align: center;
+  background-color: #4a90e2;
+  color: white;
+  padding: 20px 0;
+}
+
+/* Services Page Header */
+.services-header {
+  background-color: #4a90e2;
+  color: white;
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+
+.services-header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+/* Services Container */
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Service Cards */
+.service-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  width: 350px; /* Increased card width */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-title {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.service-details,
+.additional-charge {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.highlight {
+  font-weight: bold;
+  color: #4a90e2;
+}
+
+.service-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.service-list li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+/* Responsive Design for Mobile Devices */
+@media (max-width: 768px) {
+  .service-card {
+    width: 80%; /* Adjust card width for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .services-header {
+    padding: 10px 0; /* Adjust header padding for mobile */
+  }
+
+  .services-header h1 {
+    font-size: 20px; /* Adjust header font size for mobile */
+  }
+
+  .service-card {
+    width: 100%; /* Full-width cards on small screens */
+    margin: 0 auto;
+  }
+
+  .service-title {
+    font-size: 18px; /* Adjust font size for mobile */
+  }
+
+  .service-details,
+  .additional-charge {
+    font-size: 16px; /* Adjust font size for mobile */
+  }
+
+  .service-list li {
+    font-size: 14px; /* Adjust font size for list items on mobile */
+  }
+}
